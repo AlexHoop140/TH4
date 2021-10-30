@@ -153,19 +153,6 @@ int main(){
     Tree t11 = Create("Charlie karlos", t8, t10);
     Tree t12 = Create("Binary Search", t5, t11);
     Tree T = Create("Aged", t12, NULL);
-
-
-/*
-    Tree T1 = Create3('E', NULL, NULL, NULL);
-    Tree T2 = Create3('D', NULL, T1, NULL);
-    Tree T3 = Create3('C', NULL, T2, T1);
-    Tree T6 = Create3('H', NULL, NULL, NULL);
-    Tree T5 = Create3('G', NULL, T6, NULL);
-    Tree T4 = Create3('F', T5, NULL, NULL);
-    Tree T7 = Create3('B', T3, T4, NULL);
-
-    Tree T = Create3('A', T7, NULL, NULL);
-*/
     
     cout << endl << "===== Duyet tien tu =====" << endl;
     preOrder(T);
