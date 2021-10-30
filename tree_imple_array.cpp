@@ -76,16 +76,16 @@ void ReadTree(TREE &T){
     int i;
     init_tree(T);
 
-    cout << "Cay co bao nhieu nut? " << endl;
+    cout << "Cay co bao nhieu nut? ";
     cin >> T.maxNode;
-    cout << "Nhap nhan cua nut goc kieu char " << endl;
+    cout << "Nhap nhan cua nut goc kieu char ";
     cin >> T.data[0];
 
     T.parent[0] = -1;
     for(int i = 1; i < T.maxNode; i++){
-        cout << "Nhap cha cua nut so nguyen " << i << endl;
+        cout << "Nhap cha cua nut so nguyen " << i << ": ";
         cin >> T.parent[i];
-        cout << "Nhap nhan cua nut kieu char " << i << endl;
+        cout << "Nhap nhan cua nut kieu char " << i << ": ";
         cin >> T.data[i]; 
     }
 
