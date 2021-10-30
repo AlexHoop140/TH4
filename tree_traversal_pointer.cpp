@@ -72,23 +72,6 @@ void preOrder(Node rt) {
     }
 }
 
-void preOrderWithoutRecursion(Node root){
-    Node p = root;
-    stack<Node> ptr_list;
-    while(p != NULL || !ptr_list.empty()){
-        while(p != NULL){
-            cout << p->Data << " ";
-            ptr_list.push(p);
-            p = p->Leftmost_Child;
-        }
-
-        p = ptr_list.top();
-        ptr_list.pop();
-        p = p->Right_Sibling;
-    }
-    
-}
-
 void InOrder(Node n){
     Node i = leftChild(n);
     if(i != NULL)
@@ -143,7 +126,7 @@ int main(){
     Tree t1 = Create("Kaggle pro", NULL, NULL);
     Tree t2 = Create("Mike P", NULL, NULL);
     Tree t3 = Create("Lemon nade", NULL, t2);
-    Tree t4 = Create("F u", t1, NULL);
+    Tree t4 = Create("For u", t1, NULL);
     Tree t5 = Create("Eco", NULL, t4);
     Tree t6 = Create("Jackson", NULL, NULL);
     Tree t7 = Create("Huge", NULL, t6);
@@ -156,12 +139,8 @@ int main(){
     
     cout << endl << "===== Duyet tien tu =====" << endl;
     preOrder(T);
-    cout << endl;
-    preOrderWithoutRecursion(T);
     cout << endl << "===== Duyet trung tu =====" << endl;
     InOrder(T);
     cout << endl << "===== Duyet hau tu =====" << endl;
     PostOrder(T);
-    cout << endl << "===== Duyet theo muc =====" << endl;
-    LevelOrder(T);
 }
