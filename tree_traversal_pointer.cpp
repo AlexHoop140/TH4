@@ -97,30 +97,6 @@ void PostOrder(Node n){
     cout << n->Data << " ";
 }
 
-void LevelOrder(Node root){
-    if(root == NULL) 
-        return;
-    
-    queue<Node> q;
-    q.push(root);
-
-    while(!q.empty()){
-        int n = q.size();
-        while(n > 0){
-            Node p = q.front();
-            q.pop();
-            cout << p->Data << " ";
-
-            for(Node c = p->Leftmost_Child; c != NULL; c = c->Right_Sibling){
-                q.push(c);
-            }
-
-            n--;
-        }
-
-        cout << endl;
-    }
-}
 
 int main(){
     Tree t1 = Create("Kaggle pro", NULL, NULL);
